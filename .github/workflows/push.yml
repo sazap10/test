@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+    - releases/*
+name: Test
+jobs:
+  release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Report build to bugsnag
+      uses: sazap10/bugsnag-builds-action@master
+      env:
+        BUGSNAG_API_KEY: ${{ secrets.BUGSNAG_API_KEY }}
