@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - refs/tags/*
+    - release/*
 name: Test
 jobs:
   release:
