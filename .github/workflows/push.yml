@@ -12,6 +12,6 @@ jobs:
         echo $GITHUB_EVENT_NAME
     - name: Report build to bugsnag
       uses: sazap10/bugsnag-builds-action@master
-      if: github.event == "tag"
+      if: github.event_name == 'tag'
       env:
         BUGSNAG_API_KEY: ${{ secrets.BUGSNAG_API_KEY }}
