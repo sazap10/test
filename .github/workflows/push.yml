@@ -10,6 +10,8 @@ jobs:
     - name: test
       run: |
         echo $GITHUB_EVENT_NAME
+        echo $GITHUB_EVENT
+        echo $GITHUB_REF
     - name: Report build to bugsnag
       uses: sazap10/bugsnag-builds-action@master
       if: github.event_name == 'tag'
