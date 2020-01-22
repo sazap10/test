@@ -1,4 +1,4 @@
-name: CI
+name: docker buildx
 
 on: [push]
 
@@ -11,4 +11,4 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
       run: |
-        cat ~/.docker/config.json
+        find config.json
